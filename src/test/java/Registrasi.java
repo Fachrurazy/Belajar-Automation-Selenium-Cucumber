@@ -2,9 +2,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -15,7 +13,7 @@ public class Registrasi {
     WebDriver driver = null;
     @Given("Open browser")
     public void openBrowser() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Aji\\IdeaProjects\\Belajar-Automation\\Driver\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "D:\\clone\\Belajar-Automation-Selenium-Cucumber\\Driver\\chromedriver.exe");
         driver = new ChromeDriver();
     }
 
@@ -37,53 +35,78 @@ public class Registrasi {
     }
 
     @When("User Enter Last Name {string}")
-    public void userEnterLastName(String lastnamevalue) {
+    public void userEnterLastName(String lastnamevalue) throws InterruptedException {
         driver.findElement(By.xpath("//input[@id='last_4']")).sendKeys(lastnamevalue);
+        Thread.sleep(2000);
     }
 
     @When("User Enter Student ID {string}")
-    public void userEnterStudentID(String studentidvalue) {
+    public void userEnterStudentID(String studentidvalue) throws InterruptedException {
         driver.findElement(By.xpath("//input[@id='input_5']")).sendKeys(studentidvalue);
+        Thread.sleep(1000);
     }
 
     @When("User Enter Student Email {string}")
-    public void userEnterStudentEmail(String studentemailvalue) {
+    public void userEnterStudentEmail(String studentemailvalue) throws InterruptedException {
         driver.findElement(By.xpath("//input[@id='input_6']")).sendKeys(studentemailvalue);
+        Thread.sleep(1000);
     }
 
     @When("User Enter Gender")
-    public void userEnterGender() {
+    public void userEnterGender() throws InterruptedException {
+        WebElement element = driver.findElement(By.xpath("//label[@id='label_3']"));
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();",element);
+
         Select se = new Select(driver.findElement(By.xpath("//select[@id='input_3']")));
         se.selectByIndex(1);
+        Thread.sleep(1000);
     }
 
     @When("User Enter List of Classes")
-    public void userEnterListOfClasses() {
+    public void userEnterListOfClasses() throws InterruptedException {
         Select se = new Select(driver.findElement(By.xpath("//select[@id='input_7']")));
         se.selectByIndex(4);
+        Thread.sleep(1000);
     }
 
     @When("User Enter Date")
     public void userEnterDate() throws InterruptedException {
+//        WebElement element = driver.findElement(By.xpath("//img[@id='label_8']"));
+//        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();",element);
+
         driver.findElement(By.xpath("//img[@id='input_8_pick']")).click();
         Thread.sleep(1000);
         driver.findElement(By.xpath("//td[@class='selected today']")).click();
+        Thread.sleep(2000);
     }
 
     @When("User Choice Multiple")
-    public void userChoiceMultiple() {
-
+    public void userChoiceMultiple() throws InterruptedException {
+        driver.findElement(By.xpath("//label[@id='label_input_11_0']")).click();
+        driver.findElement(By.xpath("//label[@id='label_input_11_2']")).click();
+        Thread.sleep(2000);
     }
 
     @When("User Choice Single")
-    public void userChoiceSingle() {
+    public void userChoiceSingle() throws InterruptedException {
+        driver.findElement(By.xpath("//label[@id='label_input_16_1']")).click();
+        Thread.sleep(2000);
     }
 
     @When("User Enter File Upload")
-    public void userEnterFileUpload() {
+    public void userEnterFileUpload() throws InterruptedException {
+        WebElement element = driver.findElement(By.xpath("//input[@class='fileupload-input']"));
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();",element);
+
+        WebElement file = driver.findElement(By.xpath("//input[@class='fileupload-input']"));
+        //file.click();
+        file.sendKeys("D:\\PDF_TEST.pdf");
+        Thread.sleep(1000);
     }
 
     @Then("Notification Successful")
-    public void notificationSuccessful() {
+    public void notificationSuccessful() throws InterruptedException {
+        driver.findElement(By.xpath("//button[@id='input_2']")).click();
+        Thread.sleep(3000);
     }
 }

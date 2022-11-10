@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Belajar-Automation" />
+        <module name="Belajar-Automation-Selenium-Cucumber" />
       </profile>
     </annotationProcessing>
   </component>
