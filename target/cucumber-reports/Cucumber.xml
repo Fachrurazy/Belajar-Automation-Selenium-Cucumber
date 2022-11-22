@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="10.374">
+    <testcase classname="Test Registration" name="Check Registration is Successful" time="10.201">
+        <system-out><![CDATA[Given Open browser..........................................................passed
+And Open website............................................................passed
+And Located on Registration page............................................passed
+When User Enter First Name "Fachrurazy".....................................passed
+When User Enter Last Name "Atijani".........................................passed
+When User Enter Student ID "1212121212121212"...............................passed
+When User Enter Student Email "fachrurazy@gmail.com"........................passed
+When User Enter Gender......................................................passed
+When User Enter List of Classes.............................................passed
+When User Enter Date........................................................passed
+When User Choice Multiple...................................................passed
+When User Choice Single.....................................................passed
+When User Enter File Upload.................................................passed
+Then Notification Successful................................................passed
+]]></system-out>
+    </testcase>
+</testsuite>

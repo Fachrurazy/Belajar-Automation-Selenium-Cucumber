@@ -1,0 +1,216 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2022-11-22T16:46:01.470Z",
+        "line": 2,
+        "name": "Check Registration is Successful",
+        "description": "",
+        "id": "test-registration;check-registration-is-successful",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1583967400,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "Open browser",
+            "match": {
+              "location": "steps.Registrasi.openBrowser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2117372200,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Open website",
+            "match": {
+              "location": "steps.Registrasi.openWebsite()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 43861300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Located on Registration page",
+            "match": {
+              "location": "steps.Registrasi.locatedOnRegistrationPage()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 67591300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User Enter First Name \"Fachrurazy\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Fachrurazy\"",
+                  "offset": 22
+                }
+              ],
+              "location": "steps.Registrasi.userEnterFirstName(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 60601600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User Enter Last Name \"Atijani\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Atijani\"",
+                  "offset": 21
+                }
+              ],
+              "location": "steps.Registrasi.userEnterLastName(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 89943400,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User Enter Student ID \"1212121212121212\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1212121212121212\"",
+                  "offset": 22
+                }
+              ],
+              "location": "steps.Registrasi.userEnterStudentID(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 81848000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User Enter Student Email \"fachrurazy@gmail.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"fachrurazy@gmail.com\"",
+                  "offset": 25
+                }
+              ],
+              "location": "steps.Registrasi.userEnterStudentEmail(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 115024800,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User Enter Gender",
+            "match": {
+              "location": "steps.Registrasi.userEnterGender()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 114143000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User Enter List of Classes",
+            "match": {
+              "location": "steps.Registrasi.userEnterListOfClasses()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1125454800,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "User Enter Date",
+            "match": {
+              "location": "steps.Registrasi.userEnterDate()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 96132200,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "User Choice Multiple",
+            "match": {
+              "location": "steps.Registrasi.userChoiceMultiple()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 42335300,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "User Choice Single",
+            "match": {
+              "location": "steps.Registrasi.userChoiceSingle()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3080892500,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "User Enter File Upload",
+            "match": {
+              "location": "steps.Registrasi.userEnterFileUpload()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1520232900,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Notification Successful",
+            "match": {
+              "location": "steps.Registrasi.notificationSuccessful()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Test Registration",
+    "description": "",
+    "id": "test-registration",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Features/RegistrasiJitest.feature",
+    "tags": []
+  }
+]
